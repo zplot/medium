@@ -9,7 +9,6 @@ trait Ring extends AbelianGroup with Monoid {
   def builder(x: T1): T2
 
   val structureId: String
-  val finite: Boolean
   val one: T2
   val zero: T2
 
