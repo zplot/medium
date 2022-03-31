@@ -1,8 +1,15 @@
-ThisBuild / version := "0.1.0-SNAPSHOT"
+name := "algebra-sobre-scala3"
 
-ThisBuild / scalaVersion := "3.1.1"
+version := "0.1"
 
-lazy val root = (project in file("."))
-  .settings(
-    name := "algebra"
-  )
+scalaVersion := "3.1.1"
+
+scalacOptions ++= Seq("-feature")
+
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "3.2.11" % "test"
+
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.15.4" % "test"
+
+libraryDependencies += "com.lihaoyi" %% "sourcecode" % "0.2.8" // Scala-JVM
